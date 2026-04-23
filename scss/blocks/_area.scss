@@ -1,0 +1,136 @@
+.area {
+    margin: 0px 0px 120px;
+
+    @include vp-1023 {
+        margin: 0px 0px 80px;
+    }
+
+    @include vp-767 {
+        margin: 0px 0px 60px;
+    }
+
+    &__wrapper {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__devider {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 1px;
+        background: $color-fallow;
+        margin: auto 0;
+        z-index: -1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 11.5px 6px 0;
+            border-color: transparent $color-fallow transparent transparent;
+
+            @include vp-1023 {
+                border-width: 5px 8.6px 5px 0;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 0 6px 11.5px;
+            border-color: transparent transparent transparent $color-fallow;
+
+            @include vp-1023 {
+                border-width: 5px 0 5px 8.6px;
+            }
+        }
+    }
+
+    &__block {
+        margin: 0 auto;
+        height: 100px;
+        width: 368px;
+        background: $color-rustic-red;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        gap: 15px;
+
+        @include vp-1023 {
+            height: 70px;
+            width: 206px;
+            gap: 5px;
+            align-items: center;
+        }
+
+        @include vp-767 {
+            height: 50px;
+            width: 155px;
+            align-items: baseline;
+        }
+    }
+
+    &__number {
+        font-size: 140px;
+        line-height: 100px;
+        letter-spacing: -0.04em;
+        font-family: $ff-tenor;
+        color: $color-fallow;
+
+        @include vp-1023 {
+            font-size: 90px;
+            line-height: 70px;
+        }
+
+        @include vp-767 {
+            font-size: 70px;
+            line-height: 50px;
+        }
+    }
+
+    &__additional {
+        font-size: 34px;
+        line-height: 44px;
+        letter-spacing: 0em;
+        font-family: $ff-tenor;
+        color: $color-fallow;
+        text-transform: uppercase;
+
+        @include vp-1023 {
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: -0.08em;
+        }
+    }
+
+    &__text {
+        display: block;
+        text-align: center;
+        margin: 30px auto 0;
+        color: $color-white;
+        font-size: 18px;
+        line-height: 26px;
+
+        @include vp-1023 {
+            font-size: 14px;
+            line-height: 20px;
+            margin: 20px auto 0;
+        }
+    }
+}

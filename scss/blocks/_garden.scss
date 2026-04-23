@@ -1,0 +1,129 @@
+.garden {
+    margin: 0px 0px 120px;
+
+    @include vp-1023 {
+        margin: 0px 0px 60px;
+    }
+
+    @include vp-767 {
+        margin: 0px 0px 60px;
+    }
+
+    &__wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: center;
+        padding: 0;
+
+        @include vp-767 {
+            gap: 0;
+            flex-direction: column;
+        }
+    }
+
+    &__image {
+        width: 700px;
+        height: 700px;
+
+        @media (max-width: 1200px) {
+            width: 500px;
+            height: 500px;
+
+        }
+
+        @include vp-1023 {
+            width: 340px;
+            height: 340px;
+        }
+
+        @include vp-767 {
+            width: 335px;
+            height: 335px;
+        }
+    }
+
+    &__inner {
+        margin: 20px 0px 0px;
+        max-width: 500px;
+
+        @include vp-1023 {
+            max-width: 340px;
+        }
+
+        @include vp-767 {
+            max-width: 335px;
+            margin: 40px 0px 0px;
+        }
+    }
+
+    &__title {
+        font-family: $ff-tenor;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 44px;
+        letter-spacing: -0.08em;
+        text-transform: uppercase;
+        max-width: 1368px;
+        color: $color-fallow;
+        margin: 0px 0px 30px;
+        word-break: keep-all;
+        hyphens: none;
+
+        @media (max-width: 1200px) {
+            font-size: 30px;
+            line-height: 36px;
+            margin: 0px 0px 22px;
+        }
+
+        @include vp-1023 {
+            font-size: 24px;
+            line-height: 30px;
+            margin: 0px 0px 18px;
+            max-width: 728px;
+        }
+
+        @include vp-767 {
+            font-size: 20px;
+            line-height: 24px;
+            margin: 0px 0px 12px;
+            max-width: 335px;
+        }
+    }
+
+    &__list {
+        padding: 0 0 0 15px;
+
+        @include vp-767 {
+            margin: 0;
+        }
+    }
+
+    &__item {
+        font-family: $ff-roboto;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+
+        @include vp-1023 {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &::marker {
+            color: $color-fallow;
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        &:not(:last-child) {
+            margin: 0px 0px 15px;
+
+            @include vp-1023 {
+                margin: 0px 0px 8px;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.outro {
+    background: url("../images/image-lobby.jpg") no-repeat center;
+    background-size: cover;
+    height: 500px;
+
+    @media (min-resolution: 2dppx) {
+        background: url("../images/image-lobby@2x.jpg") no-repeat center;
+        background-size: cover;
+    }
+
+    @include vp-1023 {
+        height: 280px;
+        background-image: url("../images/image-lobby-tablet.jpg");
+
+        @media (min-resolution: 2dppx) {
+            background-image: url("../images/image-lobby-tablet@2x.jpg");
+        }
+    }
+
+    @include vp-767 {
+        height: 200px;
+        background-image: url("../images/image-lobby-mobile.jpg");
+
+        @media (min-resolution: 2dppx) {
+            background-image: url("../images/image-lobby-mobile@2x.jpg");
+        }
+    }
+}
